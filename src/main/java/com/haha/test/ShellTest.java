@@ -2,6 +2,7 @@ package com.haha.test;
 
 
 import com.haha.sort.Insert;
+import com.haha.sort.Merge;
 import com.haha.sort.Shell;
 
 import java.io.*;
@@ -32,6 +33,8 @@ public class ShellTest {
 //        testInsertSort(arr);
         //测试希尔排序，10万条数据，使用时间 25ms
         testShellSort(arr);
+        //测试归并排序，10万条数据，使用时间 80ms
+//        testMergeSort(arr);
     }
 
 
@@ -55,6 +58,18 @@ public class ShellTest {
     public static void testInsertSort(Integer[] arr) {
         long start = System.currentTimeMillis();
         Insert.sort(arr);
+        long end = System.currentTimeMillis();
+        System.out.println("insert sort used time =" + (end - start));
+    }
+
+    /**
+     * 测试归并排序
+     *
+     * @param arr
+     */
+    public static void testMergeSort(Integer[] arr) {
+        long start = System.currentTimeMillis();
+        Merge.sort(arr);
         long end = System.currentTimeMillis();
         System.out.println("insert sort used time =" + (end - start));
     }
