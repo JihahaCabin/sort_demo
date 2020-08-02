@@ -8,7 +8,7 @@ package com.haha.sort;
  * <p>
  * 增长量确定规则，目前没有说最好的增长量要是多少好，个说个话
  * int h=1;
- * for(h<arr.length){
+ * while(h<arr.length){
  * h=2*h+1;
  * }
  * 增长量减小规则
